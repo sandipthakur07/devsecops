@@ -39,7 +39,7 @@ pipeline {
                     } else if (scan_type == 'APIS') {
                         echo 'Running API scan...'
                         sh """
-                            docker exec zaporxy python zap-api-scan.py -t http://example.com/api/openapi.json -f openapi 
+                            docker exec zaproxy python zap-api-scan.py -t http://example.com/api/openapi.json -f openapi 
                         """
                     } else if (scan_type == 'Full') {
                         echo 'Running Full scan...'
